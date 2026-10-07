@@ -2,6 +2,7 @@ package net.kakaka.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.kakaka.tutorialmod.item.ModItems;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 
 	public static Identifier id(String path) {

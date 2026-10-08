@@ -3,6 +3,7 @@ package net.kakaka.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.kakaka.tutorialmod.block.ModBlocks;
+import net.kakaka.tutorialmod.item.ModItemGroups;
 import net.kakaka.tutorialmod.item.ModItems;
 import net.minecraft.util.Identifier;
 
@@ -15,6 +16,7 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerModItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}

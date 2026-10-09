@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "tutorialmod:pink_garnet"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  #",
+    " C ",
+    "C  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:chisel"
+  }
+}

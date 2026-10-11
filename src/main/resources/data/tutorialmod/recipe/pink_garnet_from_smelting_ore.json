@@ -1,0 +1,13 @@
+{
+  "type": "smelting",
+  "category": "misc",
+  "group": "tutorialmod:pink_garnet",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "tutorialmod:pink_garnet_ore"
+  },
+  "result": {
+    "id": "tutorialmod:pink_garnet"
+  }
+}

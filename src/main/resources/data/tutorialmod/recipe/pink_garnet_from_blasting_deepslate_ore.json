@@ -1,0 +1,13 @@
+{
+  "type": "blasting",
+  "category": "misc",
+  "group": "tutorialmod:pink_garnet",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "tutorialmod:pink_garnet_deepslate_ore"
+  },
+  "result": {
+    "id": "tutorialmod:pink_garnet"
+  }
+}

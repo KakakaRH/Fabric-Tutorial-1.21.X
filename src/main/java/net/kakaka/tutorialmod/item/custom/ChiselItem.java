@@ -20,6 +20,7 @@ public class ChiselItem extends Item {
     private static final Map<Block, Block> CHISEL_MAP =
             Map.of(
                     Blocks.STONE, Blocks.STONE_BRICKS,
+                    Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS,
                     Blocks.NETHERRACK, Blocks.NETHER_BRICKS,
                     Blocks.END_STONE, Blocks.END_STONE_BRICKS,
                     ModBlocks.RAW_PINK_GARNET_BLOCK, ModBlocks.PINK_GARNET_BLOCK
@@ -37,8 +38,9 @@ public class ChiselItem extends Item {
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> Objects.requireNonNull(context.getPlayer()).sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
                 world.playSound(null, context.getBlockPos(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS);
+                return ActionResult.SUCCESS;
             }
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 }

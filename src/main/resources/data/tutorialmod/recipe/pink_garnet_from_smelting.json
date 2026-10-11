@@ -1,6 +1,7 @@
 {
   "type": "smelting",
   "category": "misc",
+  "group": "tutorialmod:pink_garnet",
   "cookingtime": 200,
   "experience": 0.2,
   "ingredient": {

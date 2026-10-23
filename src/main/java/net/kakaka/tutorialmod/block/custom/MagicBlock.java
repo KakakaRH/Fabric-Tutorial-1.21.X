@@ -1,6 +1,7 @@
 package net.kakaka.tutorialmod.block.custom;
 
 import net.kakaka.tutorialmod.item.ModItems;
+import net.kakaka.tutorialmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -34,11 +35,14 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity item) {
-            if(item.getStack().getItem() == ModItems.PINK_GARNET) {
+            if(isValidItem(item.getStack())) {
                 item.setStack(new ItemStack(Items.DIAMOND, item.getStack().getCount()));
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+    private Boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
